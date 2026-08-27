@@ -1,10 +1,15 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail, Sparkles, Terminal } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';
 
-export const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  githubData?: {
+    public_repos?: number;
+    followers?: number;
+  } | null;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ githubData }) => {
   const { personal } = portfolioData;
 
   return (
@@ -106,7 +111,9 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="text-xs">
                 <p className="font-semibold text-slate-900 dark:text-slate-200">Systems & Mobile</p>
-                <p className="text-slate-500 dark:text-slate-400">Kotlin, C++ & Java</p>
+                <p className="text-slate-500 dark:text-slate-400">
+                  {githubData?.public_repos ? `${githubData.public_repos}+ Public Repos` : 'Kotlin, C++ & Java'}
+                </p>
               </div>
             </div>
           </div>

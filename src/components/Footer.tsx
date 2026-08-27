@@ -1,14 +1,9 @@
-'use client';
-
 import React from 'react';
-import { ArrowUp, Code2 } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';
+import { BackToTopButton } from './BackToTopButton';
 
 export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
       <div className="max-w-6xl mx-auto px-6">
@@ -47,14 +42,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Back to top button */}
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-2 rounded-lg transition-colors border border-slate-700"
-            aria-label="Scroll back to top"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <BackToTopButton />
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
@@ -62,7 +50,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} {portfolioData.personal.name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
-            Built with Next.js, React & Tailwind CSS
+            Rendered with Server-Side Rendering (SSR) & Next.js
           </p>
         </div>
       </div>

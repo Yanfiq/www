@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { User, CheckCircle2, Award, BookOpen, Layers } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';

@@ -7,12 +7,32 @@ import { ExperienceEducationSection } from '@/components/ExperienceEducationSect
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 
-export default function Home() {
+// Force dynamic server-side rendering on every request
+export const dynamic = 'force-dynamic';
+
+async function getLiveGithubStats() {
+  try {
+    const res = await fetch('https://api.github.com/users/Yanfiq', {
+      cache: 'no-store', // Always fetch fresh on server request
+      headers: {
+        'User-Agent': 'PersonalPortfolio-SSR',
+      },
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+export default async function Home() {
+  const githubData = await getLiveGithubStats();
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        <HeroSection />
+        <HeroSection githubData={githubData} />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
