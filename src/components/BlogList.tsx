@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Search, Calendar, Clock, Tag, ArrowRight, BookOpen } from 'lucide-react';
+import { Search, Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { BlogPost } from '@/lib/blog';
 
 interface BlogListProps {
@@ -80,9 +80,10 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
       {filteredPosts.length > 0 ? (
         <div className="grid md:grid-cols-2 gap-6">
           {filteredPosts.map((post) => (
-            <article
+            <Link
               key={post.slug}
-              className="group flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs blue-card-hover"
+              href={`/blog/${post.slug}`}
+              className="group flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs blue-card-hover cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <div>
                 {/* Meta info header */}
@@ -100,9 +101,7 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  <Link href={`/blog/${post.slug}`} className="focus:outline-none">
-                    {post.title}
-                  </Link>
+                  {post.title}
                 </h3>
 
                 {/* Excerpt */}
@@ -125,15 +124,12 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
                 </div>
 
                 {/* Read Link */}
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-2.5 transition-all"
-                >
+                <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-2.5 transition-all">
                   <span>Read Article</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       ) : (
