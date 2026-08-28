@@ -36,7 +36,11 @@ export const metadata: Metadata = {
       'Informatics student & ML enthusiast building human-centered intelligent software.',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
   },
 };
 
