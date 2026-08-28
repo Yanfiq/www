@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Ryan Fikri | Software Engineer & ML Enthusiast',
@@ -78,6 +79,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
         <ThemeProvider>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
