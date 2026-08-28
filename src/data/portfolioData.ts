@@ -44,7 +44,7 @@ export const portfolioData = {
       "Informatics student passionate about machine learning, full-stack systems, and crafting human-centered digital solutions.",
     location: "Surakarta, Indonesia",
     status: "Available for internships & collaborations",
-    email: "ryanfikri5@gmail.com",
+    email: "ryanfikri@ryanfikri.dev",
     github: "https://github.com/Yanfiq",
     linkedin: "https://linkedin.com/in/yanfiq",
   },
@@ -87,7 +87,6 @@ export const portfolioData = {
         { name: "Next.js" },
         { name: "Node.js" },
         { name: "Express.js" },
-        { name: "Hapi.js" },
         { name: "Tailwind CSS" },
         { name: "HTML5 / CSS3" },
       ],
@@ -110,6 +109,19 @@ export const portfolioData = {
   ] as SkillCategory[],
 
   projects: [
+    {
+      id: "pcakartasura",
+      title: "Website PCA Kartasura",
+      tagline: "Website Profil Organisasi 'Aisyiyah Kartasura",
+      description:
+        "Website profiling for 'Aisyiyah Kartasura, a Muhammadiyah organization focused on women's empowerment and community service.",
+      category: "web",
+      categoryLabel: "Web Development",
+      technologies: ["Next.js", "TailwindCSS", "Typescript", "Express.js", "PostgreSQL", "Docker", "Nginx", "Node.js"],
+      status: "Completed",
+      featured: true,
+      liveUrl: "https://pcakartasura.or.id"
+    },
     {
       id: "heallink",
       title: "HealLink",
@@ -173,7 +185,7 @@ export const portfolioData = {
         "A desktop client engineered for tracking personal book collections, logging detailed chapter reading milestones, and organizing literature wishlists.",
       category: "mobile-sys",
       categoryLabel: "Desktop Application",
-      technologies: ["Java", "JavaFX", "Gradle", "SQLite / SQL"],
+      technologies: ["Java", "JavaFX", "Gradle", "JDBC API", "SQLite / SQL"],
       githubUrl: "https://github.com/Yanfiq/LiteraLog",
       image: "/projects/literalog.png",
       status: "Archived",
@@ -200,7 +212,7 @@ export const portfolioData = {
       {
         institution: "Universitas Sebelas Maret (UNS)",
         degree: "Bachelor of Computer Science / Informatics",
-        period: "2021 — Present",
+        period: "2022 — Present",
         description:
           "Focused on artificial intelligence, algorithm design, data structures, software engineering principles, and distributed computing.",
         highlights: [
