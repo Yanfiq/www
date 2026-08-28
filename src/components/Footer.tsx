@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Code2 } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';
 import { BackToTopButton } from './BackToTopButton';
@@ -24,21 +25,24 @@ export const Footer: React.FC = () => {
 
           {/* Quick links */}
           <div className="flex flex-wrap justify-center gap-6 text-xs font-medium">
-            <a href="#about" className="hover:text-blue-400 transition-colors">
+            <Link href="/#about" className="hover:text-blue-400 transition-colors">
               About
-            </a>
-            <a href="#skills" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link href="/#skills" className="hover:text-blue-400 transition-colors">
               Skills
-            </a>
-            <a href="#projects" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link href="/#projects" className="hover:text-blue-400 transition-colors">
               Projects
-            </a>
-            <a href="#education" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link href="/#education" className="hover:text-blue-400 transition-colors">
               Education
-            </a>
-            <a href="#contact" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link href="/blog" className="hover:text-blue-400 transition-colors">
+              Blog
+            </Link>
+            <Link href="/#contact" className="hover:text-blue-400 transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Back to top button */}
@@ -50,7 +54,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} {portfolioData.personal.name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
-            Rendered with Server-Side Rendering (SSR) & Next.js
+            Built with Next.js, Server-Side Rendering (SSR) & Markdown
           </p>
         </div>
       </div>
