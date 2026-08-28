@@ -144,16 +144,15 @@ export const portfolioData = {
         "Daily journaling application equipped with NLP models to analyze psychological indicators in user-submitted stories. Designed for early detection and personalized wellness resources including relaxation streaming and healthcare facility locators.",
       longDescription:
         "HealLink is an innovative daily journaling platform built as a capstone project during the Bangkit Academy Machine Learning Cohort. The system incorporates natural language processing (NLP) pipelines to evaluate user journal entries for mental health sentiment, distress indicators, and emotional trends. By detecting early signs of distress, it provides empathetic prompts, relaxation music streaming, and geo-located healthcare assistance facilities.",
-      role: "Machine Learning & Cloud Backend Engineer",
+      role: "Machine Learning",
       keyFeatures: [
         "Trained and fine-tuned NLP classification models using TensorFlow and Python",
         "Engineered preprocessing pipelines for tokenization, sentiment extraction, and text embedding",
-        "Deployed cloud inference microservices with Hapi.js backend connected to mobile clients",
-        "Integrated relaxation audio streaming and nearby health facility locator APIs",
+        "Deployed cloud inference service using Tensorflow Serving",
       ],
       category: "ml",
       categoryLabel: "Machine Learning & NLP",
-      technologies: ["TensorFlow", "NLP", "Python", "Hapi.js", "Kotlin", "Cloud Deployment"],
+      technologies: ["TensorFlow", "NLP", "Python", "Cloud Deployment"],
       githubUrl: "https://github.com/HealLink",
       status: "Completed",
       featured: true,
@@ -214,7 +213,7 @@ export const portfolioData = {
         "Modern Android application consolidating multiple streaming ecosystems (Audius, SoundCloud, Spotify, and YouTube) into a singular, cohesive audio playback interface.",
       longDescription:
         "StreamFusion bridges fragmented digital music ecosystems into a unified Android audio player. By integrating public APIs and streaming protocols across SoundCloud, Audius, Spotify, and YouTube, users can discover, search, and curate multi-platform playlists from a single modern mobile client.",
-      role: "Android Developer",
+      role: "Creator & Developer",
       keyFeatures: [
         "Built with modern Android Jetpack Compose declarative UI and Kotlin Coroutines",
         "Unified search indexing across disparate music streaming platform APIs",
@@ -226,7 +225,7 @@ export const portfolioData = {
       technologies: ["Kotlin", "Jetpack Compose", "REST APIs", "Android Media3", "Coroutines"],
       githubUrl: "https://github.com/Yanfiq/StreamFusion",
       status: "In Progress",
-      featured: false,
+      featured: true,
     },
     {
       id: "literalog",
@@ -236,7 +235,7 @@ export const portfolioData = {
         "A desktop client engineered for tracking personal book collections, logging detailed chapter reading milestones, and organizing literature wishlists.",
       longDescription:
         "LiteraLog is an offline-first desktop application designed for book lovers to catalog their personal physical and digital book libraries. Built with JavaFX and JDBC, it provides structured logging for reading velocity, chapter progress tracking, custom book tags, and future reading wishlists.",
-      role: "Desktop Software Engineer",
+      role: "Creator & Developer",
       keyFeatures: [
         "JavaFX desktop client with responsive layouts and custom CSS styling",
         "Robust JDBC persistence layer integrated with SQLite relational database",
@@ -260,7 +259,7 @@ export const portfolioData = {
         "A 2D arcade combat game featuring real-time collision detection, projectile physics, particle effects, and enemy AI state machines.",
       longDescription:
         "An arcade-style 2D space action game engineered in C++ using the Simple and Fast Multimedia Library (SFML). The game demonstrates core game development concepts including object-oriented entity-component architectures, continuous collision detection, particle generation, and enemy AI behavioral patterns.",
-      role: "Game Programmer",
+      role: "Creator & Developer",
       keyFeatures: [
         "Custom 2D game loop with fixed-timestep physics updates and delta-time rendering",
         "Dynamic projectile trajectory calculations and bounding-box collision detection",
@@ -274,7 +273,7 @@ export const portfolioData = {
       image: "/projects/nnp_game.webp",
       images: ["/projects/nnp_game.webp"],
       status: "Completed",
-      featured: false,
+      featured: true,
     },
   ] as Project[],
 
