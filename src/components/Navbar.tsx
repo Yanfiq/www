@@ -51,11 +51,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${scrolled
           ? 'glass-nav border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm py-3'
           : 'bg-transparent py-5'
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo / Brand */}
@@ -71,7 +70,7 @@ export const Navbar: React.FC = () => {
               {portfolioData.personal.name}
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-              Portfolio
+              Personal Site
             </span>
           </div>
         </Link>
@@ -86,11 +85,10 @@ export const Navbar: React.FC = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
-                  isActive
+                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${isActive
                     ? 'bg-blue-600 text-white shadow-xs'
                     : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
