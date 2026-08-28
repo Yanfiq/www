@@ -4,14 +4,20 @@ import Link from 'next/link';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2 } from 'lucide-react';
-
-export const dynamic = 'force-dynamic';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+// Generate static routes for all markdown blog posts at build time (SSG)
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {

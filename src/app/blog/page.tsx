@@ -3,9 +3,7 @@ import { getAllPosts } from '@/lib/blog';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { BlogList } from '@/components/BlogList';
-import { Sparkles, Coffee } from 'lucide-react';
-
-export const dynamic = 'force-dynamic';
+import { Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Blog & Ramblings | Ryan Fikri',
