@@ -45,24 +45,24 @@ export const portfolioData = {
     name: "Ryan Fikri",
     title: "Software Engineer & ML Enthusiast",
     shortBio:
-      "Informatics student passionate about machine learning, full-stack systems, and crafting human-centered digital solutions.",
+      "Informatics student who loves tinkering with machine learning, full-stack development, and exploring whatever interesting tech catches my eye.",
     location: "Surakarta, Indonesia",
-    status: "Available for internships & collaborations",
+    status: "Open for internships, projects & chat",
     email: "ryanfikri@ryanfikri.dev",
     github: "https://github.com/Yanfiq",
     linkedin: "https://linkedin.com/in/yanfiq",
   },
 
   about: {
-    heading: "Building Intelligent & Human-Centered Technology",
+    heading: "Turning curiosity into code, models, and fun experiments",
     paragraphs: [
-      "I am an Informatics student at Sebelas Maret University (UNS) and a graduate of the Bangkit Academy Machine Learning Cohort. My passion lies at the intersection of practical machine learning, systems programming, and modern web application development.",
-      "Throughout my journey, I have developed solutions ranging from NLP-driven mental health analysis pipelines in my capstone project (HealLink) to interactive simulators and cross-platform desktop applications. I believe technology should not only be algorithmically sound, but intuitive and empathetic to user needs.",
-      "I constantly explore emerging domains—whether building distributed streaming architectures, tuning neural networks with TensorFlow and Scikit-learn, or writing high-performance code in C++, Kotlin, and TypeScript.",
+      "Hey there! I'm an Informatics student at Sebelas Maret University (UNS) and a Bangkit Academy ML graduate. I love building things that live at the intersection of machine learning, web applications, and system tinkering.",
+      "Whether it's training ML models, whipping up interactive desktop tools, or daily-driving and tweaking my Arch Linux setup, I genuinely enjoy figuring out how things work under the hood and making them fun to use.",
+      "When I'm not writing code or experimenting with neural nets, you'll probably find me trying out new developer tools, writing custom scripts for my workflow, or diving into random tech.",
     ],
     stats: [
       { label: "Academic Focus", value: "Informatics @ UNS" },
-      { label: "Core Domains", value: "ML, NLP & Full-Stack" },
+      { label: "Core Domains", value: "ML, Web & Systems" },
       { label: "Capstone", value: "Bangkit ML Cohort" },
     ],
   },
